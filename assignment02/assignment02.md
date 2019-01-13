@@ -102,3 +102,43 @@ Let \(G\) be a group, and let \(H\) and \(K\) be subgroups of \(G\). Show that \
 ---
 
 Counterexample? Subgroup axioms
+
+Subgroup axioms for \(H\).
+
+a) \(H≠∅\)
+b) \(h_1,h_2∈H\) implies \(h_1·h_2∈H\)
+c) If \(h∈H\) then \(h^{-1}∈H\)
+
+Subgroup axioms for \(K\).
+
+a) \(K≠∅\)
+b) \(k_1,k_2∈K\) implies \(k_1·k_2∈K\)
+c) If \(k∈K\) then \(k^{-1}∈K\)
+
+Lets test subgroup axioms for \(H∪K\).
+
+### a
+\(H≠∅\) and \(K≠∅\) implies \(H∪K≠∅\)
+
+### b
+Let \(a,b∈H∪K\).
+
+1) \(a∈H\), \(a∈K\) and \(b∈K\), \(b∈H\)
+    - \(H=K\)
+2) \(a∈H\), \(a∉K\) and \(b∈K\), \(b∈H\)
+    - \(K⊆H\)
+3) \(a∈H\), \(a∈K\) and \(b∈K\), \(b∉H\)
+    - \(H⊆K\)
+4) \(a∈H\), \(a∉K\) and \(b∈K\), \(b∉H\)
+    - Counterexample
+
+TODO: Counterexample
+
+3) \(a·b\) is not nesessarily in \(H∪K\)
+
+
+### c
+1) If \(a∈H∪K\) then \(a∈H\) or \(a∈K\).
+2) If \(a∈H\) then \(a^{-1}∈H\)
+3) If \(a∈K\) then \(a^{-1}∈K\)
+4) Since \(H⊂H∪K\) and \(K⊂H∪K\) then \(a^{-1}∈H∪K\)
