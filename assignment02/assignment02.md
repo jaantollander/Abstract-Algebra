@@ -37,14 +37,24 @@ Alternatively
 I) \(H≠∅\)
 II) \(a,b∈H\) implies \(a·b^{-1}∈H\).
 
+---
+
+- [Group](https://en.wikipedia.org/wiki/Group_(mathematics))
+- [Subgroup](https://en.wikipedia.org/wiki/Subgroup)
+
+
 ## Problem 1
 ### a)
-**Trivial case** \(n=1\): Let \(a_1∈G\) then by *inverse element* axiom
+For a group \(G\), show by induction, that \[(a_1·a_2·…·a_n)^{-1}=a_n^{-1}·…·a_2^{-1}·a_1^{-1}\] for arbitrary \(a_i∈G\), \(i=1,…,n\) and \(n∈ℕ\).
+
+---
+
+**Trivial case** \(n=1\): From *inverse element* axiom
 \[
 a_1·a_1^{-1}=e.
 \]
 
-**Base case** \(n=2\): Let \(a_1,a_2∈G\) then by *closure* axiom also \(x=a_1·a_2∈G\).
+**Base case** \(n=2\): From *closure* axiom \(x=a_1·a_2∈G\) then
 
 \[
 \begin{aligned}
@@ -57,7 +67,7 @@ a_2·(a_1·a_2)^{-1} &= a_1^{-1}·e \\
 \end{aligned}
 \]
 
-**General case** \(n\): Let \(a_1,a_2,…,a_n∈G\) then by the *closure* and *transitivity* axioms
+**General case** \(n\): Using *closure* and *transitivity* axioms
 \[
 x=a_1·a_2·…·a_{n-1}·a_n =a_1·(a_2·…·(a_{n-1}·a_n))∈G.
 \]
@@ -68,11 +78,9 @@ Then using the same process as in the base case
 
 
 ### b)
-The Caley table for the group \(ℤ_7^×:=\{1,2,3,4,5,6\}\) with multiplication modulo \(7\).
+Write down the Caley table for the group \(ℤ_7^×:=\{1,2,3,4,5,6\}\) with multiplication modulo \(7\).
 
-```julia
-print(reshape([mod(i*j, 7) for i in 1:6 for j in 1:6],(6,6)))
-```
+---
 
 |\(×\)   |1   |2   |3   |4   |5   |6   |
 |----|----|----|----|----|----|----|
@@ -83,5 +91,14 @@ print(reshape([mod(i*j, 7) for i in 1:6 for j in 1:6],(6,6)))
 |**5**   |5   |3   |1   |6   |4   |2   |
 |**6**   |6   |5   |4   |3   |2   |1   |
 
+Julia code:
+```julia
+print(reshape([mod(i*j, 7) for i in 1:6 for j in 1:6],(6,6)))
+```
 
 ## Problem 2
+Let \(G\) be a group, and let \(H\) and \(K\) be subgroups of \(G\). Show that \(H∪K\) is a subgroup of \(G\) if and only if \(H⊆K\) or \(K⊆H\).
+
+---
+
+Counterexample? Subgroup axioms
