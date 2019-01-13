@@ -121,20 +121,13 @@ Lets test subgroup axioms for \(H∪K\).
 \(H≠∅\) and \(K≠∅\) implies \(H∪K≠∅\)
 
 ### b
-Let \(a,b∈H∪K\).
+- If \(H=K\) then \(H∪K=H=K\)
+- If \(K⊆H\) then \(H∪K=H\)
+- If \(H⊆K\) then \(H∪K=K\)
 
-1) \(a∈H\), \(a∈K\) and \(b∈K\), \(b∈H\)
-    - \(H=K\)
-2) \(a∈H\), \(a∉K\) and \(b∈K\), \(b∈H\)
-    - \(K⊆H\)
-3) \(a∈H\), \(a∈K\) and \(b∈K\), \(b∉H\)
-    - \(H⊆K\)
-4) \(a∈H\), \(a∉K\) and \(b∈K\), \(b∉H\)
-    - Counterexample
+Otherwise
 
-TODO: Counterexample
-
-3) \(a·b\) is not nesessarily in \(H∪K\)
+Let \(a,b∈H∪K\) such that \(a∈H\), \(a∉K\) and \(b∈K\), \(b∉H\) then \(a·b\) is not quaranteed to be in \(H∪K\) according to the axioms.
 
 
 ### c
