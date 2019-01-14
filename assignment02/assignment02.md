@@ -115,23 +115,31 @@ a) \(K≠∅\)
 b) \(k_1,k_2∈K\) implies \(k_1·k_2∈K\)
 c) If \(k∈K\) then \(k^{-1}∈K\)
 
-Lets test subgroup axioms for \(H∪K\).
+Lets test subgroup axioms for \(H∪K\). There are three cases in which the group \(H∪K\) **is a subgroup** of \(G\). In all of these, the subgroup axioms of \(H∪K\) reduce to either subgroup axioms of \(H\) or \(K\).
 
-### a
+1) If \(H=K\) then \(H∪K=H=K\). Reduces to the subgroup axioms of \(H\) or \(K\).
+2) If \(K⊆H\) then \(H∪K=H\). Reduced to the subgroup axioms of \(H\).
+3) If \(H⊆K\) then \(H∪K=K\). Reduces to the subgroup axioms of \(K\).
+
+In the fourth case, \(H∪K\) **is not a subgroup** of \(G\).
+
+4) If \(H⊊K\) and \(K⊊H\).
+
+**Proof**: This proof provide a counterexample for
+
+1) Let \(a,b∈H∪K\) such that \(a∈H\), \(a∉K\), \(b∈K\), and \(b∉H\)
+2) Implies that \(a·b∈H∪K\).
+3) Implies that \(a·b∈H\) or \(a·b∈K\)
+4) If \(a·b∈H\) then \(a,b∈H\) or if \(a·b∈K\) then \(a,b∈K\).
+5) These are in conflict with the assumptions and therefore \(a·b∉H∪K\) and \(H∪K\) is not a subgroup of \(G\).
+
+<!--
+a
 \(H≠∅\) and \(K≠∅\) implies \(H∪K≠∅\)
 
-### b
-- If \(H=K\) then \(H∪K=H=K\)
-- If \(K⊆H\) then \(H∪K=H\)
-- If \(H⊆K\) then \(H∪K=K\)
+c
 
-Otherwise
-
-Let \(a,b∈H∪K\) such that \(a∈H\), \(a∉K\) and \(b∈K\), \(b∉H\) then \(a·b\) is not quaranteed to be in \(H∪K\) according to the axioms.
-
-
-### c
 1) If \(a∈H∪K\) then \(a∈H\) or \(a∈K\).
 2) If \(a∈H\) then \(a^{-1}∈H\)
 3) If \(a∈K\) then \(a^{-1}∈K\)
-4) Since \(H⊂H∪K\) and \(K⊂H∪K\) then \(a^{-1}∈H∪K\)
+4) Since \(H⊂H∪K\) and \(K⊂H∪K\) then \(a^{-1}∈H∪K\) -->
