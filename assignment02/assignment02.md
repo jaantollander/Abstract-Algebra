@@ -96,6 +96,7 @@ Julia code:
 print(reshape([mod(i*j, 7) for i in 1:6 for j in 1:6],(6,6)))
 ```
 
+
 ## Problem 2
 Let \(G\) be a group, and let \(H\) and \(K\) be subgroups of \(G\). Show that \(H∪K\) is a subgroup of \(G\) if and only if \(H⊆K\) or \(K⊆H\).
 
@@ -172,13 +173,10 @@ If we assume closure under operation, then \(a_i,a_j∈H\) implies \(x=a_i·a_j�
 
 Combined
 
-
-
 \[
 a_i·a_j=e \\
 a_i=e·a_j^{-1}
 \]
-
 
 
 ### b
@@ -190,39 +188,34 @@ Let \(G\) be a group. For \(g∈G\) define the *centralizer* \(C_G(g):=\{x∈G�
 
 ---
 
-1) For all \(g\), \[C_G(g)≠∅.\]
+**Nonempty**: For all \(g\), \[C_G(g)≠∅.\]
 
-**Proof**: For every \(g\) if \(x=g\) then \(x⋅g=g·g=g·x=g·g\) therefore the centralizer always contains atleast the element \(g\).
+**Proof**: For every \(g\) if \(x=g\) then \[x⋅g=g·g=g·x\] therefore the centralizer always contains atleast the element \(g\).
 
-2) For all \(a,b∈C_G(g)\) \[a⋅b∈C_G(g)\]
+**Closure under operation**: For all \(a,b∈C_G(g)\) \[a⋅b∈C_G(g)\]
 
-**Proof**: Let \(a,b∈C_G(g)\) then
-\[
-\begin{cases}
-a·g=g·a \\
-b·g=g·b \\
-\end{cases}
-\]
-\(a·b\) belongs to \(C_G(g)\) if it satisfies the property \(x·g=g·x\)
+**Proof**: Let \(a,b∈C_G(g)\) then \(a·g=g·a\) and \(b·g=g·b\). It can be shown that \(a·b\) belongs to \(C_G(g)\) if it satisfies the property \(x·g=g·x\).
 \[
 \begin{aligned}
 (a·b)·g&=a·(b·g) \\
 &=a·(g·b) \\
 &=(a·g)·b \\
 &=(g·a)·b \\
-&=g·(a·b)
+&=g·(a·b).
 \end{aligned}
 \]
 
-3) For all \(a∈C_G(g)\) there exists \(a^{-1}∈C_G(g)\)
+**Closure under inverse**: For all \(a∈C_G(g)\) there exists \(a^{-1}∈C_G(g)\)
 
-**Proof**:
-
+**Proof**: Let \(a∈C_G(g)\) then \(a·g=g·a\). It can shown that \(a^{-1}\) belongs to \(C_G(g)\) if it satisfies the property \(x·g=g·x\).
 \[
 \begin{aligned}
 a^{-1}·g&=g·a^{-1} \\
 a^{-1}·g·a&=g \\
 g·a&=a·g \\
-a·g&=g·a \\
+a·g&=g·a. \\
 \end{aligned}
 \]
+
+
+## Problem 5
