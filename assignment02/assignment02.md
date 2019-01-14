@@ -28,9 +28,9 @@ Let \(G\) be a group and \(∅=H⊆G\) a subset of \(G\). We say \(H\) is a **su
 
 A subset \(H\) of a group \(G\) is a subgroup, if and only if the following hold
 
-a) **Nonempty**: \(H≠∅\)
-b) **Closed under operation**: \(a,b∈H\) implies \(a·b∈H\)
-c) **Closed under inverse**: If \(a∈H\) then \(a^{-1}∈H\)
+a) **Nonempty**: The subgroup is non-empty \(H≠∅\).
+b) **Closed under operation**: For all \(a,b∈H\) \[a·b∈H.\]
+c) **Closed under inverse**: For all \(a∈H\) \[a^{-1}∈H.\]
 
 Alternatively
 
@@ -39,8 +39,17 @@ II) \(a,b∈H\) implies \(a·b^{-1}∈H\).
 
 ---
 
+For a group \(G\) and a subset \(T⊆G\) define
+\[
+⟨T⟩:=⋂\{H⊆G∣T⊆H\},
+\]
+the intersection of all subgroups that contain \(T\).
+
+---
+
 - [Group](https://en.wikipedia.org/wiki/Group_(mathematics))
 - [Subgroup](https://en.wikipedia.org/wiki/Subgroup)
+- [Cayley table](https://en.wikipedia.org/wiki/Cayley_table)
 
 
 ## Problem 1
@@ -148,35 +157,15 @@ Let \(G\) be a group and let \(H\) be a subset of \(G\).
 ---
 
 ### a
-\((G,·,e)\)
+If \(H\) is finite and non-empty, then \(H\) is a subgroup of \(G\) if and only if \(H\) is closed under the operation on \(G\).
 
-\((H,·,e)\)
+---
 
-- \(H\) is finite
-- \(H≠∅\)
+<!-- \(H=\{a_1,…,a_n\}\) where \(n∈ℕ\) -->
 
-\(H=\{a_1,…,a_n\}\) where \(n∈ℕ\)
+The axiom for being non-empty \(H≠∅\) is already satisfied. The existence of inverse element can be proven using the existence of identity element, which is always included in the subgroup. Lets assume that \(H\) is **closed under operation**, which means that all elements \(a∈H\) are products \(a=b·c\) under the operation on elements \(b,c∈H\).
 
-Identity element \(e\) is included in the set \(H\).
-
-Lets assume that \(H\) is **closed under operation**. The existence of inverse element can be proven using the existence of identity element.
-
-For all \(x∈H\)
-\[
-x·e=e·x=x
-\]
-
-
-If we assume closure under operation, then \(a_i,a_j∈H\) implies \(x=a_i·a_j∈H\).
-
-(for all \(k\) exists some \(i\) and \(j\) such that)
-
-Combined
-
-\[
-a_i·a_j=e \\
-a_i=e·a_j^{-1}
-\]
+TODO: Cayley table, finite, For all \(a∈H\) there exists \(b∈H\) such that \[a·b=e \\a^{-1}=b.\]
 
 
 ### b
