@@ -4,54 +4,6 @@ author: Jaan Tollander de Balsch
 date: \today
 header-includes: \usepackage{unicode-math}
 ---
-## Definitions
-A **group** is a triple \((G,·,e)\) where \(G\) is a set, \(·\) is a binary operation on \(G\) and the indentity \(e\), such that the following hold
-
-a) **Closure**: For all \(x,y∈G\) the result operation \[x·y∈G.\]
-b) **Associativity**: For all  \(x,y,z∈G\), \[(x·y)·z=x·(y·z).\]
-c) **Indentity element**: There exists an identity element \(e\) such that for all \(x∈G\) \[e·x=x·e=x.\]
-d) **Inverse element**: For every \(x∈G\) there exists \(y∈G\) such that \[x·y=y·x=e.\]
-
-<!-- It's common to omit the symbol \(·\). -->
-
-**Semigroup**: Only (a), (b) holds.
-
-**Monoid** Only (a), (b), and \c) hold.
-
-\(G\) is called **Abelian group** if the following also holds
-
-d) **Commutativity**: For all \(x,y∈G\) we have \(x·y=y·x\).
-
----
-
-Let \(G\) be a group and \(∅=H⊆G\) a subset of \(G\). We say \(H\) is a **subgroup** of \(G\), formally \(H⊆G\), it is closed under the operation on \(G\) and satisfies all group axioms.
-
-A subset \(H\) of a group \(G\) is a subgroup, if and only if the following hold
-
-a) **Nonempty**: The subgroup is non-empty \(H≠∅\).
-b) **Closed under operation**: For all \(a,b∈H\) \[a·b∈H.\]
-c) **Closed under inverse**: For all \(a∈H\) \[a^{-1}∈H.\]
-
-Alternatively
-
-I) \(H≠∅\)
-II) \(a,b∈H\) implies \(a·b^{-1}∈H\).
-
----
-
-For a group \(G\) and a subset \(T⊆G\) define
-\[
-⟨T⟩:=⋂\{H⊆G∣T⊆H\},
-\]
-the intersection of all subgroups that contain \(T\).
-
----
-
-- [Group](https://en.wikipedia.org/wiki/Group_(mathematics))
-- [Subgroup](https://en.wikipedia.org/wiki/Subgroup)
-- [Cayley table](https://en.wikipedia.org/wiki/Cayley_table)
-
-
 ## Problem 1
 ### a)
 For a group \(G\), show by induction, that \[(a_1·a_2·…·a_n)^{-1}=a_n^{-1}·…·a_2^{-1}·a_1^{-1}\] for arbitrary \(a_i∈G\), \(i=1,…,n\) and \(n∈ℕ\).
@@ -161,11 +113,11 @@ If \(H\) is finite and non-empty, then \(H\) is a subgroup of \(G\) if and only 
 
 ---
 
-<!-- \(H=\{a_1,…,a_n\}\) where \(n∈ℕ\) -->
+The axiom for being non-empty \(H≠∅\) is already satisfied. In order to prove that \(H\) is a subgroup, we **need to prove the existence** of the indentity element in \(H\). [@contemporary_abstract_algebra, pg. 64: Finite Subgroup Test]
 
-The axiom for being non-empty \(H≠∅\) is already satisfied. The existence of inverse element can be proven using the existence of identity element, which is always included in the subgroup. Lets assume that \(H\) is **closed under operation**, which means that all elements \(a∈H\) are products \(a=b·c\) under the operation on elements \(b,c∈H\).
+Lets assume that \(H\) is **closed under operation**. Because \(H\) is non-empty it contains element \(a∈H\). If \(a=e\) there is nothing more to prove. If \(a≠e\), we consider a sequence of elements \(a, a^2, …\) which are all included in \(H\) by closure. Because the set is finite all the elements in the sequence cannot be distinct. Therefore there exists \(i>j\) such that \(a^i=a^j\) which implied \(a^{i-j}=e\). Because \(i-j>0\) then \(a^{i-j}∈H\) and therefore \(e∈H\).
 
-TODO: Cayley table, finite, For all \(a∈H\) there exists \(b∈H\) such that \[a·b=e \\a^{-1}=b.\]
+<!-- Cayley table, finite, For all \(a∈H\) there exists \(b∈H\) such that \[a·b=e \\a^{-1}=b.\] -->
 
 
 ### b
@@ -207,4 +159,7 @@ a·g&=g·a. \\
 \]
 
 
-## Problem 5
+<!-- ## Problem 5 -->
+
+
+## References
