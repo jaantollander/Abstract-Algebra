@@ -4,17 +4,44 @@ author: Jaan Tollander de Balsch, 452056
 date: \today
 header-includes: \usepackage{unicode-math}
 ---
-pg. 60
+TODO: references
 
-- order of a Group
-- oder of an Element
+* pg. 60, order of an Element
+* pg. 66, center of a group
+* [@contemporary_abstract_algebra]
 
-pg. 66
-
-- center of a group
 
 ## Problem 3
-- centralizer?
+Let \(G\) be a group and let \(H\) and \(K\) be subgroups of \(G\). Show that the set \(HK:=\{h·k∣h∈H,k∈K\}\) is a subgroup of \(G\) if and only if \(HK=KH.\)
+
+---
+
+1) \(HK\) is non-empty because \(H\) and \(K\) are non-empty.
+
+---
+
+For all \(a,b∈HK\) implies \(a·b∈HK\)
+
+For all \(h_1,h_2∈H\) and \(k_1,k_2∈K\)
+
+\[
+(h_1·k_1)·(h_2·k_2)∈HK
+\]
+
+\(h_1·k_1∈H\) and \(h_2·k_2∈K\) implies
+\(k_1∈H\) and \(h_2∈K\)
+
+---
+
+For all \(a∈HK\) implies \(a^{-1}∈HK\)
+
+\((h·k)^{-1}∈HK\)
+
+\(k^{-1}·h^{-1}∈HK\) implies \(k^{-1}∈H\) and \(h^{-1}∈K\)
+
+---
+
+implies \(HK=KH\)
 
 
 ## Problem 4
@@ -95,9 +122,9 @@ a^n &= e \\
 
 This implies that the order of \(a^{-1}\) is also \(n\).
 
-TODO: contractition proof that \(n\) is the smallest positive integer and therefore the order.
-
-TODO: \((a·b)^{-1}=b^{-1}·a^{-1}\) implies that \((a^n)^{-1}=(a^{-1})^n\)
+* TODO: infinite order case
+* TODO: contractition proof that \(n\) is the smallest positive integer and therefore the order.
+* TODO: \((a·b)^{-1}=b^{-1}·a^{-1}\) implies that \((a^n)^{-1}=(a^{-1})^n\)
 
 
 ### (b)
@@ -144,3 +171,6 @@ This implies that the order of element \(b·a\) is also \(n\). Using this proper
 (b·c·a)^{n}&=e.
 \end{aligned}
 \]
+
+
+## References
