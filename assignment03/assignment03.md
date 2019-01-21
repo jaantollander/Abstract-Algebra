@@ -6,8 +6,8 @@ header-includes: \usepackage{unicode-math}
 ---
 TODO: references
 
-* pg. 60, order of an Element
-* pg. 66, center of a group
+* pg. 60, terminology and notation
+* pg. 63, subgroup tests
 * [@contemporary_abstract_algebra]
 
 
@@ -16,28 +16,31 @@ Let \(G\) be a group and let \(H\) and \(K\) be subgroups of \(G\). Show that th
 
 ---
 
-1) \(HK\) is non-empty because \(H\) and \(K\) are non-empty.
+In order to prove that \(HK\) is a subgroup of \(G\) if only only if \(HK=KH\) it needs to satisfy the subgroup test. In this case we will be using the **Two-Step Subgroup Test**. The subset \(HK\) is **nonempty** because subsets \(H\) and \(K\) are non-empty.
 
 ---
 
-For all \(a,b∈HK\) implies \(a·b∈HK\)
+For all \(a,b∈HK\) implies \(a·b∈HK\).
 
-For all \(h_1,h_2∈H\) and \(k_1,k_2∈K\)
+TODO: closure
 
-\[
-(h_1·k_1)·(h_2·k_2)∈HK
-\]
-
-\(h_1·k_1∈H\) and \(h_2·k_2∈K\) implies
-\(k_1∈H\) and \(h_2∈K\)
+1) Let \(a=h_1·k_1\) and \(b=h_2·k_2\) where \(h_1,h_2∈H\) and \(k_1,k_2∈K\).
+2) The definition of \(HK\) implies that \(h_1·k_1∈H\) and \(h_2·k_2∈K\).
+3) A further implication is that
+\(h_1,k_1∈H\) and \(h_2,k_2∈K\).
+4) Therefore all \(h∈H\) must be in \(K\) and all \(k∈K\) must be in \(H\) for \(HK\) to be a subgroup of \(G\).
 
 ---
 
-For all \(a∈HK\) implies \(a^{-1}∈HK\)
+For all \(a∈HK\) implies \(a^{-1}∈HK\).
 
-\((h·k)^{-1}∈HK\)
+TODO: socks shoes property
 
-\(k^{-1}·h^{-1}∈HK\) implies \(k^{-1}∈H\) and \(h^{-1}∈K\)
+1) Let \(a=h·k\) where \(h∈H\) and \(k∈K\).
+2) \((h·k)^{-1}∈HK\)
+3) Equivalently \(k^{-1}·h^{-1}∈HK\).
+4) Definition of \(HK\) implies \(k^{-1}∈H\) and \(h^{-1}∈K\).
+5) Therefore also all inverses of \(h∈H\) must be in \(K\) and all inverses of \(k∈K\) must be in \(H\) for \(HK\) to be a subgroup of \(G\).
 
 ---
 
