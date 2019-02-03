@@ -37,6 +37,8 @@ Then using the same process as in the base case
 (a_1·a_2·…·a_{n-1}·a_n)^{-1}=a_n^{-1}·a_{n-1}^{-1}·…·a_2^{-1}·a_1^{-1}.
 \]
 
+[@contemporary_abstract_algebra, pg. 52]
+
 
 ### b)
 Write down the Caley table for the group \(ℤ_7^×:=\{1,2,3,4,5,6\}\) with multiplication modulo \(7\).
@@ -113,7 +115,7 @@ If \(H\) is finite and non-empty, then \(H\) is a subgroup of \(G\) if and only 
 
 ---
 
-The axiom for being non-empty \(H≠∅\) is already satisfied. In order to prove that \(H\) is a subgroup, we **need to prove the existence** of the indentity element in \(H\). [@contemporary_abstract_algebra, pg. 64: Finite Subgroup Test]
+The axiom for being non-empty \(H≠∅\) is already satisfied. In order to prove that \(H\) is a subgroup, we **need to prove the existence** of the identity element in \(H\). [@contemporary_abstract_algebra, pg. 64: Finite Subgroup Test]
 
 Lets assume that \(H\) is **closed under operation**. Because \(H\) is non-empty it contains element \(a∈H\). If \(a=e\) there is nothing more to prove. If \(a≠e\), we consider a sequence of elements \(a, a^2, …\) which are all included in \(H\) by closure. Because the set is finite all the elements in the sequence cannot be distinct. Therefore there exists \(i>j\) such that \(a^i=a^j\) which implied \(a^{i-j}=e\). Because \(i-j>0\) then \(a^{i-j}∈H\) and therefore \(e∈H\).
 
@@ -157,9 +159,6 @@ g·a&=a·g \\
 a·g&=g·a. \\
 \end{aligned}
 \]
-
-
-<!-- ## Problem 5 -->
 
 
 ## References
